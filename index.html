@@ -12,10 +12,20 @@
     <title>Igrushka</title>
     <script src="scripts/header.js"></script>
     <script src="scripts/content.js"></script>
+    <script src="scripts/popup.js"></script>
 </head>
 <body>
 <body>
 <div class="page">
+
+    <div id="popup" class="popup">
+        <div class="popup-content">
+            <span class="close" onclick="closePopup()" id="close-button">&times;</span>
+            <p>Зареєстрованим користувачам знижка 10%</p>
+            <a href="html/auth.html" id="register-link">Зареєструватися!</a>
+        </div>
+    </div>
+
     <div id="header">
         <div class="cabinet">
             <a class="cabinet-a" href="html/auth.html" id="open-modal-button">
@@ -65,7 +75,6 @@
 
         <hr />
         <div id="header_burger">
-            <!-- Existing code... -->
             <div class="burger-menu" onclick="toggleMenu()">
                 <div class="bar1"></div>
                 <div class="bar2"></div>
