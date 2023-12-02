@@ -1,0 +1,150 @@
+:root {
+    --color-light-blue: #86A7A8;
+    --ground-light: #F4F3EF;
+    --color-white: #ffffff;
+}
+
+.body-content {
+    background-color: var(--ground-light);
+}
+
+.btn-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-inner-container {
+    display: inline-flex;
+    border: 2px solid var(--color-light-blue);
+    border-radius: 50px;
+    overflow: hidden;
+    justify-content: center;
+    margin: 60px;
+}
+
+.btn-left, .btn-right {
+    padding: 15px 25px;
+    background-color: var(--color-light-blue);
+    border: none;
+}
+
+.btn-right {
+    background-color: var(--ground-light);
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    background-color: var(--ground-light);
+    margin-left: -2px;
+    border-color: var(--color-light-blue);
+}
+
+.btn-right a {
+    color: var(--color-light-blue);
+    text-transform: uppercase;
+}
+
+.btn-left a {
+    color: var(--color-white);
+    text-transform: uppercase;
+}
+
+/*товари*/
+
+.list-goods {
+    display: flex;
+    justify-content: center;
+    column-gap: 20px;
+    flex-wrap: wrap;
+}
+
+.img-goods {
+    position: relative;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+}
+
+.good {
+    border-radius: 20px;
+    background-color: var(--color-white);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 8px 5px 100px;
+}
+
+.good-body {
+    padding: 15px 5px;
+    font-weight: 400;
+    font-size: 18px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #191C1D;
+    text-align: center;
+    margin-top: 6px;
+}
+
+.good-name {
+    margin-bottom: 7px;
+    color: var(--color-light-blue);
+    font-size: 24px;
+}
+
+.good-price {
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.good-btn {
+    width: 100px;
+    height: 30px;
+    background-color: var(--color-yellow);
+    border-radius: 50%;
+    font-size: 14px;
+    color: white;
+    border: none;
+    border-top-left-radius: 39.5px;
+    border-top-right-radius: 39.5px;
+    border-bottom-left-radius: 39.5px;
+    border-bottom-right-radius: 39.5px;
+
+}
+
+.good-btn:hover {
+    background-color: #7B9090;
+}
+
+
+.prev2, .next2 {
+    color: var(--color-teal);
+    position: absolute;
+    padding: 15px;
+    font-size: 15px;
+    background-color: rgba(122, 158, 159, 0.7);
+    border-radius: 50%;
+    width: 15px;
+    height: 15px;
+    bottom: -450px;
+}
+
+.next2 {
+    right: 0;
+    right: 20px;
+}
+
+.prev2 {
+    left: 0;
+    left: 20px;
+}
+
+.prev2:hover, .next2:hover {
+    background-color: rgba(0, 128, 128, 0.6);
+}
+
+.button-text {
+    font-size: 15px;
+    padding: 3px;
+}

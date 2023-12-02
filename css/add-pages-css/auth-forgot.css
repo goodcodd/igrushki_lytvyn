@@ -1,0 +1,13 @@
+.auth-forget{
+    margin-left: 30px;
+}
+.auth-forget-p{
+    background: #eeeeee;
+    border: 1px solid #eeeeee;
+    margin-bottom: 20px;
+    padding: 10px 20px;
+    border-radius: 4px;
+}
+.sign_field-input{
+    width:auto;
+}

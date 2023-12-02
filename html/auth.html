@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="../css/main-page-css/styles.css">
+    <link rel="stylesheet" type="text/css" href="../css/main-page-css/header.css">
+    <link rel="stylesheet" type="text/css" href="../css/main-page-css/above-footer.css">
+    <link rel="stylesheet" type="text/css" href="../css/main-page-css/footer.css">
+
+    <link rel="stylesheet" type="text/css" href="../css/main-page-css/body-content.css">
+    <link rel="stylesheet" type="text/css" href="../css/add-pages-css/auth.css">
+</head>
+<body>
+<div id="header">
+    <div class="cabinet">
+        <a class="cabinet-a" href="#" id="open-modal-button">
+            <img src="../assets/icons/Account.png" alt="Мій кабінет">
+            <span>Мій кабінет</span>
+        </a>
+        <hr />
+    </div>
+
+    <div class="main-header">
+
+        <div class="left-content">
+
+            <ul class="main-ul">
+                <li class="main-li li-bottom">
+                    <a  class="main-a" href="+380663411528">
+                        <img src="../assets/icons/phone.png" alt="Phone Icon">
+                        +380 66 341 15 28
+                    </a>
+                </li>
+                <li class="main-li">
+                    <a class="main-a" href="igrushkifromnastushka">
+                        <img src="../assets/icons/Instagram.png" alt="Instagram Icon">
+                        igrashki.com
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="center-content">
+            <img class="center-logo" src="../assets/img/igrashikicom.png">
+        </div>
+
+        <div class="right-content">
+            <ul class="right-ul">
+                <li class="right-li">
+                    <a href="/">
+                        <img src="../assets/icons/Shop_Search.png" alt="Search Icon">
+                    </a>
+                </li>
+                <li class="right-li">
+                    <a href="/">
+                        <img src="../assets/icons/Shop_Cart.png" alt="Cart Icon">
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <hr/>
+
+    <div id="menu">
+        <ul class="menu-list">
+            <li><a class="menu-item active" href="../index.html">Головна</a></li>
+            <li class="dropdown">
+                <a class="menu-item dropbtn" href="html/goods.html">Товари ⯆</a>
+                <ul class="dropdown-content">
+                    <li><a href="#">Батарейки</a></li>
+                    <li><a href="#">Велосипеди</a></li>
+                    <li><a href="#">Пазли</a></li>
+                    <li><a href="#">Ляльки</a></li>
+                    <li><a href="#">Музичні іграшки</a></li>
+                    <li><a href="#">Казки</a></li>
+                    <li><a href="#">Іграшкові набори</a></li>
+                </ul>
+            </li>
+            <li><a class="menu-item" href="#news">Новинки</a></li>
+            <li><a class="menu-item" href="#delivery">Доставка</a></li>
+            <li><a class="menu-item" href="#about">Про нас</a></li>
+            <li><a class="menu-item" href="#contacts">Контакти</a></li>
+        </ul>
+    </div>
+</div>
+<div class="above-footer">
+    <div class="content-container">
+        <div class="categories">
+            <h3 class="categories-title">Категорії</h3>
+            <ul class="categories-list">
+                <li class="categories-li top active">
+                    <a href="#" class="categories-a">Головна</a>
+                </li>
+                <li class="categories-li">
+                    <a href="html/goods.html" class="categories-a">Товари <span class="categ-span">+</span></a>
+                </li>
+                <li class="categories-li">
+                    <a href="html/news.html" class="categories-a">Новинки</a>
+                </li>
+                <li class="categories-li">
+                    <a href="html/delivery.html" class="categories-a">Доставки</a>
+                </li>
+                <li class="categories-li">
+                    <a href="html/about.html" class="categories-a">Про нас</a>
+                </li>
+                <li class="categories-li bottom">
+                    <a href="html/contacts.html" class="categories-a">Контакти</a>
+                </li>
+            </ul>
+        </div>
+        <div class="wrapper">
+            <div class="auth">
+                <h1>Деталі вашого акаунта</h1>
+                <h2>Якщо Ви зареєстровані, будь ласка, введіть свій мейл та пароль:*</h2>
+                <div class="sign_field">
+                    <form id="loginForm" class="sign_form" onsubmit="return validateForm()">
+                        <input type="email" id="email" name="email" class="sign_field-input" placeholder="email" required>
+
+                        <input type="password" id="password" name="password" class="sign_field-input" placeholder="password" required>
+
+                    </form>
+                    <div class="Form-btn">
+                        <button type="submit" class="btn-inner-container">Увійти</button>
+                        <div class="Form-checkbox-container">
+                            <label for="rememberMe">Запам'ятати мене:</label>
+                            <input type="checkbox" id="rememberMe" name="rememberMe">
+                        </div>
+                        <div class="Form-btn-a">
+                            <a href="auth-forget/fyu.html">Забули ім’я користувача?</a>
+                            <a href="auth-forget/fyp.html">Забули пароль?</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="sign-up">
+                    <h1>Зареєструватися</h1>
+                    <div class="sign_field">
+                        <form id="registrationForm" class="sign_form" onsubmit="return validateForm()">
+
+                            <input type="text" id="firstName" name="firstName" class="sign_field-input" placeholder="Ім'я*" required>
+
+                            <input type="text" id="lastName" name="lastName"  class="sign_field-input" placeholder="Прізвище*" required >
+
+                            <input type="email" id="email" name="email" class="sign_field-input" placeholder="E-mail*" required>
+
+                            <input type="password" id="password" name="password" class="sign_field-input" placeholder="Пароль*" required>
+
+                            <input type="text" id="department" name="department" class="sign_field-input" placeholder="№ відділення\Індекс*" required>
+
+                            <input type="text" id="city" name="city" class="sign_field-input" placeholder="Місто*" required>
+
+                            <input type="tel" id="phone" name="phone" class="sign_field-input" placeholder="Телефон*" required>
+
+                        </form>
+                        <div class="Form-btn">
+                            <button type="submit" class="btn-inner-container">Зареєструватися</button>
+                            <button type="submit" class="btn-inner-container">Скасувати</button>
+                        </div>
+                    </div>
+                    <div class="sign-up_button"></div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,81 @@
+:root {
+    --color-not-active: #66615b;
+    --background-line: #FFFCF5;
+    --background-footer: #F8F8F8;
+    --color-text: #000;
+    --color-subtitle: #7B9090;
+    --color-title: #000;
+}
+
+/*line*/
+.line {
+    background: var(--background-line);
+}
+
+.table {
+    padding: 50px 0;
+}
+
+/*footer*/
+
+.footer {
+    background-color: var(--background-footer);
+    padding: 20px 0;
+}
+
+.lists-footer {
+    display: flex;
+    justify-content: center;
+    gap: 70px;
+}
+
+.column {
+    max-width: 300px;
+    text-align: left;
+}
+
+.column-h {
+    font-weight: bold;
+    margin-bottom: 10px;
+    font-size: 20px;
+    color: var(--color-subtitle);
+}
+
+.column-p {
+    max-width: 210px;
+    font-size: 16px;
+}
+
+.card {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.icon {
+    width: 20px;
+    height: 20px;
+    padding-right: 5px;
+}
+
+.column-p {
+    margin: 0;
+}
+
+.column-p {
+    max-width: 250px;
+}
+
+.contact-link {
+    color: var(--color-text);
+}
+
+.images-shop {
+    margin-bottom: 5px;
+}
+
+.footer-end {
+    margin-left: 100px;
+    margin-bottom: 0px;
+    font-size: 16px;
+}
