@@ -54,7 +54,6 @@
     display: flex;
     justify-content: center;
     column-gap: 20px;
-    flex-wrap: wrap;
 }
 
 .img-goods {
@@ -147,4 +146,23 @@
 .button-text {
     font-size: 15px;
     padding: 3px;
+}
+
+@media screen and (min-width: 1280px) {
+    .prev2, .next2 {
+        bottom: -300px;
+    }
+    .list-goods {
+        flex-wrap: wrap;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .prev2, .next2 {
+        bottom: -370px;
+    }
+
+    .good {
+        margin: 0px 20px 80px;
+    }
 }

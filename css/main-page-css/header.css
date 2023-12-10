@@ -359,16 +359,6 @@
     cursor: pointer;
 }
 
-/* "Зареєструватися!"*/
-.popup-content a {
-    display: block;
-    margin-top: 20px;
-    padding: 10px 20px;
-    background-color: var(--color-yellow);
-    color: #fff;
-    text-decoration: none;
-    border-radius: 5px;
-}
 
 @media (max-width: 770px) {
     .wrapper-menu{

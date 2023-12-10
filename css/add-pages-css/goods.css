@@ -33,3 +33,12 @@
     align-items: center;
     justify-content: center;
 }
+
+.good-team_photo {
+    transition-duration: 1s;
+}
+
+.good-team_photo:hover{
+    transform: scale(1.1,1.1);
+    transition-duration: 1s;
+}
