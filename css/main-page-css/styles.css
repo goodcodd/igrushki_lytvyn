@@ -1,11 +1,19 @@
-@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro');
+@font-face {
+    font-family: SourceSansPro_Light;
+    src: url("../../assets/fonts/SourceSansPro-ExtraLight.otf");
+}
+
+@font-face {
+    font-family: SourceSansPro_Black;
+    src: url("../../assets/fonts/SourceSansPro-Black.otf");
+}
 
 :root {
     --color-light-grey: #BCBAAA;
 }
 
 body {
-    font-family: 'Source Sans Pro', sans-serif;
+    font-family: 'SourceSansPro', sans-serif;
     margin: 0;
 }
 
@@ -15,10 +23,6 @@ a {
 
 ul {
     list-style-type: none;
-}
-
-h1, p, a {
-    font-family: inherit;
 }
 
 hr {

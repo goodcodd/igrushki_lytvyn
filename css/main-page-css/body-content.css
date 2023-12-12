@@ -24,9 +24,11 @@
 }
 
 .btn-left, .btn-right {
-    padding: 15px 25px;
+    padding: 10px 20px;
     background-color: var(--color-light-blue);
     border: none;
+    font-family: SourceSansPro_Black;
+    font-weight: bold;
 }
 
 .btn-right {
@@ -93,7 +95,7 @@
 }
 
 .good-price {
-    margin-bottom: 10px;
+    margin: 15px 0;
     font-weight: bold;
 }
 
@@ -103,13 +105,12 @@
     background-color: var(--color-yellow);
     border-radius: 50%;
     font-size: 14px;
-    color: white;
+    color: var(--color-white);
     border: none;
     border-top-left-radius: 39.5px;
     border-top-right-radius: 39.5px;
     border-bottom-left-radius: 39.5px;
     border-bottom-right-radius: 39.5px;
-
 }
 
 .good-btn:hover {
@@ -165,4 +166,9 @@
     .good {
         margin: 0px 20px 80px;
     }
+}
+
+@media screen and (min-width: 412px) {
+
+
 }

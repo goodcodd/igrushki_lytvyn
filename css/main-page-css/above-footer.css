@@ -84,6 +84,9 @@
     margin: 30px 0;
 }
 
+. card-strong {
+    font-family: SourceSansPro_Black;
+}
 /*cards-about*/
 .cards-about {
     background-color: var(--ground-light);

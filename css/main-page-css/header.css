@@ -45,6 +45,7 @@
     color: var(--color-dark-tael);
     font-size: 20px;
     font-weight: bold;
+    font-family: SourceSansPro_Black;
 }
 
 .main-ul {
@@ -56,6 +57,8 @@
 .main-li {
     display: flex;
     align-items: center;
+    font-size: 30px;
+    font-weight: bold;
 }
 
 .main-li img {
@@ -113,6 +116,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    font-weight: bold;
+    font-family: SourceSansPro_Light;
+    margin: 0;
 }
 
 .menu-item, .dropdown {
