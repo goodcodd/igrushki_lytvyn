@@ -10,45 +10,51 @@
     <link rel="stylesheet" type="text/css" href="css/main-page-css/above-footer.css">
     <link rel="stylesheet" type="text/css" href="css/main-page-css/footer.css">
     <title>Igrushka</title>
+
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
     <script src="scripts/header.js"></script>
     <script src="scripts/content.js"></script>
 </head>
 <body>
 <div class="page">
     <div id="header">
-        <div class="cabinet">
-            <a class="cabinet-a" href="html/auth.html" id="open-modal-button">
-                <img src="assets/icons/Account.png" alt="Мій кабінет">
+        <div class="cabinet bg-light-beige p-0 min-h-auto text-base">
+            <a href="html/auth.html" class="cabinet-a flex items-center text-teal">
+                <img src="assets/icons/Account.png" alt="Мій кабінет" class="mr-2 mt-2 mb-2 w-15 h-15">
                 <span>Мій кабінет</span>
             </a>
             <hr />
         </div>
 
-        <div class="main-header">
-
-           <div class="left-content">
-                <ul class="main-ul">
-                    <li class="main-li li-bottom">
-                        <a  class="main-a" href="https://igrashki.com/">
-                            <img src="assets/icons/phone.png" alt="">
+        <div class="main-header flex justify-between items-center">
+            <div class="left-content">
+                <ul class="main-ul list-none p-0 ml-10">
+                    <li class="main-li flex items-center font-bold text-30">
+                        <a href="https://igrashki.com/" class="main-a text-dark-teal">
+                            <img src="assets/icons/phone.png" alt="" class="mr-10 w-20 h-20">
                             +380 66 341 15 28
                         </a>
                     </li>
-                    <li class="main-li">
-                        <a class="main-a" href="https://www.instagram.com/">
-                            <img src="assets/icons/Instagram.png" alt="">
+                    <li class="main-li flex items-center font-bold">
+                        <a href="https://www.instagram.com/" class="main-a text-dark-teal">
+                            <img src="assets/icons/Instagram.png" alt="" class="mr-10 w-20 h-20">
                             igrashki.com
                         </a>
                     </li>
                 </ul>
             </div>
-            <div class="center-content">
-                <img class="center-logo" src="assets/img/igrashikicom.png" alt="">
+            <div class="center-content mx-auto text-light-blue">
+                <img src="assets/img/igrashikicom.png" alt="" class="inline-block">
             </div>
 
             <div class="right-content">
-                <ul class="right-ul">
-                    <li class="right-li">
+                <ul class="right-ul list-none p-0 flex mr-100 ml-95">
+                    <li class="right-li mr-15">
                         <a href="/">
                             <img src="assets/icons/Shop_Search.png" alt="Search Icon">
                         </a>
@@ -63,14 +69,15 @@
         </div>
 
         <hr />
+
         <div id="header_burger">
-            <div class="burger-menu" onclick="toggleMenu()">
-                <div class="bar1"></div>
-                <div class="bar2"></div>
-                <div class="bar3"></div>
+            <div class="burger-menu flex" onclick="toggleMenu()">
+                <div class="bar1 w-35 h-5 bg-black my-6"></div>
+                <div class="bar2 w-35 h-5 bg-black my-6"></div>
+                <div class="bar3 w-35 h-5 bg-black my-6"></div>
             </div>
-            <div class="wrapper-menu-list">
-                <ul id="menu-list" class="menu-list categories-list">
+            <div class="wrapper-menu-list hidden md:block w-full h-full bg-gray-500 overflow-hidden">
+                <ul id="menu-list" class="menu-list categories-list p-0 m-0">
                     <li class="categories-li"><a class="menu-item">Новинки</a></li>
                     <li class="categories-li"><a class="menu-item">Доставка</a></li>
                     <li class="categories-li"><a class="menu-item">Про нас</a></li>
@@ -78,364 +85,354 @@
                 </ul>
             </div>
         </div>
-        <div class="wrapper-menu">
-            <div id="menu menu-btn">
-
-                <ul class="menu-list">
-                    <li><a class="menu-item active" href="#">Головна</a></li>
-                    <li class="dropdown">
-                        <a class="menu-item dropbtn" href="html/goods.html">Товари ⯆</a>
-                        <ul class="dropdown-content">
-                            <li><a href="#">Батарейки</a></li>
-                            <li><a href="#">Велосипеди</a></li>
-                            <li><a href="#">Пазли</a></li>
-                            <li><a href="#">Ляльки</a></li>
-                            <li><a href="#">Музичні іграшки</a></li>
-                            <li><a href="#">Казки</a></li>
-                            <li><a href="#">Іграшкові набори</a></li>
-                        </ul>
-                    </li>
-                    <li><a class="menu-item">Новинки</a></li>
-                    <li><a class="menu-item">Доставка</a></li>
-                    <li><a class="menu-item">Про нас</a></li>
-                    <li><a class="menu-item">Контакти</a></li>
-
-                </ul>
-                <div class="menu">
-                    <nav>
-                        <ul>
-                            <li><a href="#">Главная</a></li>
-                            <li><a href="#">О нас</a></li>
-                            <li><a href="#">Услуги</a></li>
-                            <li><a href="#">Контакты</a></li>
-                        </ul>
-                    </nav>
-                </div>
+        <div class="wrapper-menu hidden md:flex" id="menu menu-btn">
+            <ul class="menu-list p-0 m-0">
+                <li><a class="menu-item active" href="#">Головна</a></li>
+                <li class="dropdown relative">
+                    <a class="menu-item dropbtn" href="html/goods.html">Товари ⯆</a>
+                    <ul class="dropdown-content absolute bg-light-beige min-w-200 z-10 hidden">
+                        <li><a href="#">Батарейки</a></li>
+                        <li><a href="#">Велосипеди</a></li>
+                        <li><a href="#">Пазли</a></li>
+                        <li><a href="#">Ляльки</a></li>
+                        <li><a href="#">Музичні іграшки</a></li>
+                        <li><a href="#">Казки</a></li>
+                        <li><a href="#">Іграшкові набори</a></li>
+                    </ul>
+                </li>
+                <li><a class="menu-item">Новинки</a></li>
+                <li><a class="menu-item">Доставка</a></li>
+                <li><a class="menu-item">Про нас</a></li>
+                <li><a class="menu-item">Контакти</a></li>
+            </ul>
+            <div class="menu">
+                <nav>
+                    <ul>
+                        <li><a href="#">Главная</a></li>
+                        <li><a href="#">О нас</a></li>
+                        <li><a href="#">Услуги</a></li>
+                        <li><a href="#">Контакты</a></li>
+                    </ul>
+                </nav>
             </div>
         </div>
+
         <div class="header-img">
-            <div class="slideshow-container">
+            <div class="slideshow-container relative mx-auto text-center max-w-full">
                 <div class="slider-first">
-                    <img src="assets/img/background/завантаження.jpg" style="width: 100%" alt="">
-                    <div class="text">
-                        <div class="text-block">
-                            <p class="text1">Ми працюємо щодня!</p>
-                            <p class="text2">Мінімальна сума замовлення 300 грн</p>
+                    <img src="assets/img/background/завантаження.jpg" class="w-full" alt="">
+                    <div class="text absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+                        <div class="text-block flex flex-col items-center justify-center">
+                            <p class="text1 bg-opacity-80 bg-teal-500 text-white p-5 text-5xl min-w-750px m-5">Ми працюємо щодня!</p>
+                            <p class="text2 bg-opacity-80 bg-teal-500 text-white p-5 text-2xl">Мінімальна сума замовлення 300 грн</p>
                         </div>
-                        <button class="oval-button">Детальніше ❯</button>
+                        <button class="oval-button w-48 h-12 bg-yellow-500 rounded-full text-white text-lg">Детальніше ❯</button>
                     </div>
                 </div>
 
                 <div class="slider-first">
-                    <img src="assets/img/background/завантаження1.jpg" style="width:100%" alt="">
-                    <div class="text">
-                        <div class="text-block">
-                            <p class="text1">Оптові ціни від виробників</p>
-                            <p class="text2">Великий асортимент товарів.</p>
+                    <img src="assets/img/background/завантаження1.jpg" class="w-full" alt="">
+                    <div class="text absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+                        <div class="text-block flex flex-col items-center justify-center">
+                            <p class="text1 bg-opacity-80 bg-teal-500 text-white p-5 text-5xl min-w-750px m-5">Оптові ціни від виробників</p>
+                            <p class="text2 bg-opacity-80 bg-teal-500 text-white p-5 text-2xl">Великий асортимент товарів.</p>
                         </div>
-                        <button class="oval-button">Детальніше ❯</button>
+                        <button class="oval-button w-48 h-12 bg-yellow-500 rounded-full text-white text-lg">Детальніше ❯</button>
                     </div>
                 </div>
 
                 <div class="slider-first">
-                    <img src="assets/img/background/завантаження2.jpg" style="width:100%" alt="">
-                    <div class="text">
-                        <div class="text-block">
-                            <p class="text1">Підтримати Україну та ЗСУ</p>
-                            <p class="text2">10% від прибутку ми передаємо на ЗСУ</p>
+                    <img src="assets/img/background/завантаження2.jpg" class="w-full" alt="">
+                    <div class="text absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+                        <div class="text-block flex flex-col items-center justify-center">
+                            <p class="text1 bg-opacity-80 bg-teal-500 text-white p-5 text-5xl min-w-750px m-5">Підтримати Україну та ЗСУ</p>
+                            <p class="text2 bg-opacity-80 bg-teal-500 text-white p-5 text-2xl">10% від прибутку ми передаємо на ЗСУ</p>
                         </div>
-                        <button class="oval-button">Детальніше ❯</button>
+                        <button class="oval-button w-48 h-12 bg-yellow-500 rounded-full text-white text-lg">Детальніше ❯</button>
                     </div>
                 </div>
 
-                <a class="prev custom-button" onclick="plusSlides(-1)">
+                <a class="prev custom-button absolute top-1/2 left-0 transform -translate-y-1/2" onclick="plusSlides(-1)">
                     <span class="button-text">❮</span>
                 </a>
-                <a class="next custom-button" onclick="plusSlides(1)">
+                <a class="next custom-button absolute top-1/2 right-0 transform -translate-y-1/2" onclick="plusSlides(1)">
                     <span class="button-text">❯</span>
                 </a>
 
-                <div class="bullets">
-                    <span class="dot" onclick="currentSlide(1)"></span>
-                    <span class="dot" onclick="currentSlide(2)"></span>
-                    <span class="dot" onclick="currentSlide(3)"></span>
+                <div class="bullets absolute text-center bottom-10 left-1/2 transform -translate-x-1/2">
+                    <span class="dot inline-block w-6 h-6 m-0.5 bg-white rounded-full cursor-pointer" onclick="currentSlide(1)"></span>
+                    <span class="dot inline-block w-6 h-6 m-0.5 bg-white rounded-full cursor-pointer" onclick="currentSlide(2)"></span>
+                    <span class="dot inline-block w-6 h-6 m-0.5 bg-white rounded-full cursor-pointer" onclick="currentSlide(3)"></span>
                 </div>
             </div>
         </div>
     </div>
 
-    <div class="body-content">
-        <div class="btn-container">
-            <div class="btn-inner-container">
-                <button class="btn-left"><a href="#">Популярні</a></button>
-                <button class="btn-right"><a href="#">Hовинки</a></button>
+    <div class="body-content bg-ground-light">
+        <div class="btn-container flex items-center justify-center">
+            <div class="btn-inner-container inline-flex border-2 border-light-blue-500 rounded-full overflow-hidden justify-center m-8">
+                <button class="btn-left px-4 py-2 bg-light-blue-500 border-none font-SourceSansPro_Black font-bold">
+                    <a href="#" class="text-white uppercase">Популярні</a>
+                </button>
+                <button class="btn-right px-4 py-2 bg-ground-light border-light-blue-500 border-none font-SourceSansPro_Black font-bold">
+                    <a href="#" class="text-light-blue uppercase">Hовинки</a>
+                </button>
             </div>
         </div>
 
-        <div class="list-goods">
-            <div class="good">
-                <img class="img-goods" src="assets/img/goods/good1.png" alt="">
-                <div class="good-body">
-                    <div class="good-name">Ігровий набір Rainbow</div>
+        <a class="prev2 custom-button absolute left-20 bottom-2" href="#">
+            <span class="button-text text-teal-500 bg-opacity-70 bg-teal-700 rounded-full px-4 py-2">❮</span>
+        </a>
+        <a class="next2 custom-button absolute right-20 bottom-2" href="#">
+            <span class="button-text text-teal-500 bg-opacity-70 bg-teal-700 rounded-full px-4 py-2">❯</span>
+        </a>
+
+        <div class="list-goods flex justify-center gap-20 list-goods-slider">
+            <div class="good bg-white rounded-lg flex flex-col items-center m-8">
+                <img class="img-goods w-full rounded-10" src="assets/img/goods/good1.png" alt="">
+                <div class="good-body p-5 font-400 text-18 flex flex-col items-center text-dark">
+                    <div class="good-name text-light-blue text-24 mb-7">Ігровий набір Rainbow</div>
                     <img src="assets/img/stars/stars1.png" alt="">
-                    <div class="good-price">5 000 грн</div>
-                    <button class="good-btn">Купити</button>
+                    <div class="good-price mt-15 font-bold">5 000 грн</div>
+                    <button class="good-btn mt-8">Купити</button>
                 </div>
             </div>
 
-            <div class="good">
-                <img class="img-goods" src="assets/img/goods/good2.png" alt="">
-                <div class="good-body">
-                    <div class="good-name">Фігурка Тиранозавр Рекс</div>
+            <div class="good bg-white rounded-lg flex flex-col items-center m-8">
+                <img class="img-goods w-full rounded-10" src="assets/img/goods/good2.png" alt="">
+                <div class="good-body p-5 font-400 text-18 flex flex-col items-center text-dark">
+                    <div class="good-name text-light-blue text-24 mb-7">Фігурка Тиранозавр Рекс</div>
                     <img src="assets/img/stars/stars2.png" alt="">
-                    <div class="good-price">870 грн</div>
-                    <button class="good-btn">Купити</button>
+                    <div class="good-price mt-15 font-bold">870 грн</div>
+                    <button class="good-btn mt-8">Купити</button>
                 </div>
             </div>
 
-            <div class="good">
-                <img class="img-goods" src="assets/img/goods/good3.png" alt="">
-                <div class="good-body">
-                    <div class="good-name">Іграшка Баштовий кран</div>
+            <div class="good bg-white rounded-lg flex flex-col items-center m-8">
+                <img class="img-goods w-full rounded-10" src="assets/img/goods/good3.png" alt="">
+                <div class="good-body p-5 font-400 text-18 flex flex-col items-center text-dark">
+                    <div class="good-name text-light-blue text-24 mb-7">Іграшка Баштовий кран</div>
                     <img src="assets/img/stars/stars3.png" alt="">
-                    <div class="good-price">1 050 грн</div>
-                    <button class="good-btn">Купити</button>
+                    <div class="good-price mt-15 font-bold">1 050 грн</div>
+                    <button class="good-btn mt-8">Купити</button>
                 </div>
             </div>
 
-            <div class="good">
-                <img class="img-goods" src="assets/img/goods/good4.png" alt="">
-                <div class="good-body">
-                    <div class="good-name">Іграшковий вертоліт</div>
+            <div class="good bg-white rounded-lg flex flex-col items-center m-8">
+                <img class="img-goods w-full rounded-10" src="assets/img/goods/good4.png" alt="">
+                <div class="good-body p-5 font-400 text-18 flex flex-col items-center text-dark">
+                    <div class="good-name text-light-blue text-24 mb-7">Іграшковий вертоліт</div>
                     <img src="assets/img/stars/stars2.png" alt="">
-                    <div class="good-price">1 700 грн</div>
-                    <button class="good-btn">Купити</button>
+                    <div class="good-price mt-15 font-bold">1 700 грн</div>
+                    <button class="good-btn mt-8">Купити</button>
                 </div>
             </div>
 
-            <div class="good">
-                <img class="img-goods" src="assets/img/goods/good5.png" alt="">
-                <div class="good-body">
-                    <div class="good-name">Ляльки Baby Born</div>
+            <div class="good bg-white rounded-lg flex flex-col items-center m-8">
+                <img class="img-goods w-full rounded-10" src="assets/img/goods/good5.png" alt="">
+                <div class="good-body p-5 font-400 text-18 flex flex-col items-center text-dark">
+                    <div class="good-name text-light-blue text-24 mb-7">Ляльки Baby Born</div>
                     <img src="assets/img/stars/stars3.png" alt="">
-                    <div class="good-price">1 750 грн</div>
-                    <button class="good-btn">Купити</button>
+                    <div class="good-price mt-15 font-bold">1 750 грн</div>
+                    <button class="good-btn mt-8">Купити</button>
                 </div>
             </div>
 
-            <div class="good">
-                <img class="img-goods" src="assets/img/goods/good6.png" alt="">
-                <div class="good-body">
-                    <div class="good-name">Ігровий набір LOL Surprise</div>
+            <div class="good bg-white rounded-lg flex flex-col items-center m-8">
+                <img class="img-goods w-full rounded-10" src="assets/img/goods/good6.png" alt="">
+                <div class="good-body p-5 font-400 text-18 flex flex-col items-center text-dark">
+                    <div class="good-name text-light-blue text-24 mb-7">Ігровий набір LOL Surprise</div>
                     <img src="assets/img/stars/stars1.png" alt="">
-                    <div class="good-price">495 грн</div>
-                    <button class="good-btn">Купити</button>
+                    <div class="good-price mt-15 font-bold">495 грн</div>
+                    <button class="good-btn mt-8">Купити</button>
                 </div>
             </div>
 
-            <div class="good">
-                <img class="img-goods" src="assets/img/goods/good7.png" alt="">
-                <div class="good-body">
-                    <div class="good-name">Робот із голос управ</div>
+            <div class="good bg-white rounded-lg flex flex-col items-center m-8">
+                <img class="img-goods w-full rounded-10" src="assets/img/goods/good7.png" alt="">
+                <div class="good-body p-5 font-400 text-18 flex flex-col items-center text-dark">
+                    <div class="good-name text-light-blue text-24 mb-7">Робот із голос управ</div>
                     <img src="assets/img/stars/stars1.png" alt="">
-                    <div class="good-price">1 128 грн</div>
-                    <button class="good-btn">Купити</button>
+                    <div class="good-price mt-15 font-bold">1 128 грн</div>
+                    <button class="good-btn mt-8">Купити</button>
                 </div>
             </div>
 
-            <div class="good">
-                <img class="img-goods" src="assets/img/goods/good8.png" alt="">
-                <div class="good-body">
-                    <div class="good-name">Лялька Barbie</div>
+            <div class="good bg-white rounded-lg flex flex-col items-center m-8">
+                <img class="img-goods w-full rounded-10" src="assets/img/goods/good8.png" alt="">
+                <div class="good-body p-5 font-400 text-18 flex flex-col items-center text-dark">
+                    <div class="good-name text-light-blue text-24 mb-7">Лялька Barbie</div>
                     <img src="assets/img/stars/stars1.png" alt="">
-                    <div class="good-price">1 800 грн</div>
-                    <button class="good-btn">Купити</button>
+                    <div class="good-price mt-15 font-bold">1 800 грн</div>
+                    <button class="good-btn mt-8">Купити</button>
                 </div>
             </div>
 
-            <div class="good">
-                <img class="img-goods" src="assets/img/goods/good9.png" alt="">
-                <div class="good-body">
-                    <div class="good-name">Дерев'яні кубики</div>
+            <div class="good bg-white rounded-lg flex flex-col items-center m-8">
+                <img class="img-goods w-full rounded-10" src="assets/img/goods/good9.png" alt="">
+                <div class="good-body p-5 font-400 text-18 flex flex-col items-center text-dark">
+                    <div class="good-name text-light-blue text-24 mb-7">Дерев'яні кубики</div>
                     <img src="assets/img/stars/stars1.png" alt="">
-                    <div class="good-price">810 грн</div>
-                    <button class="good-btn">Купити</button>
+                    <div class="good-price mt-15 font-bold">810 грн</div>
+                    <button class="good-btn mt-8">Купити</button>
                 </div>
             </div>
 
-            <div class="good">
-                <img class="img-goods" src="assets/img/goods/good10.png" alt="">
-                <div class="good-body">
-                    <div class="good-name">Музичний трактор</div>
+            <div class="good bg-white rounded-lg flex flex-col items-center m-8">
+                <img class="img-goods w-full rounded-10" src="assets/img/goods/good10.png" alt="">
+                <div class="good-body p-5 font-400 text-18 flex flex-col items-center text-dark">
+                    <div class="good-name text-light-blue text-24 mb-7">Музичний трактор</div>
                     <img src="assets/img/stars/stars1.png" alt="">
-                    <div class="good-price">1 245 грн</div>
-                    <button class="good-btn">Купити</button>
+                    <div class="good-price mt-15 font-bold">1 245 грн</div>
+                    <button class="good-btn mt-8">Купити</button>
                 </div>
             </div>
 
-            <div class="good">
-                <img class="img-goods" src="assets/img/goods/good11.png" alt="">
-                <div class="good-body">
-                    <div class="good-name">М'яка іграшка пес Патрон</div>
+            <div class="good bg-white rounded-lg flex flex-col items-center m-8">
+                <img class="img-goods w-full rounded-10" src="assets/img/goods/good11.png" alt="">
+                <div class="good-body p-5 font-400 text-18 flex flex-col items-center text-dark">
+                    <div class="good-name text-light-blue text-24 mb-7">М'яка іграшка пес Патрон</div>
                     <img src="assets/img/stars/stars1.png" alt="">
-                    <div class="good-price">450 грн</div>
-                    <button class="good-btn">Купити</button>
+                    <div class="good-price mt-15 font-bold">450 грн</div>
+                    <button class="good-btn mt-8">Купити</button>
                 </div>
             </div>
-
-
-            <a class="prev2 custom-button" onclick="plusSlides(-1)">
-                <span class="button-text">❮</span>
-            </a>
-            <a class="next2 custom-button" onclick="plusSlides(1)">
-                <span class="button-text">❯</span>
-            </a>
 
         </div>
     </div>
 
-    <div class="above-footer">
-        <div class="content-container">
+    <div class="above-footer bg-ground-light">
+        <div class="content-container flex justify-start max-w-7xl mx-auto p-5">
             <div class="categories">
-                <h3 class="categories-title">Категорії</h3>
+                <h3 class="categories-title text-3xl font-light text-green-600">Категорії</h3>
                 <ul class="categories-list">
-                    <li class="categories-li top active">
-                        <a href="#" class="categories-a">Головна</a>
+                    <li class="categories-li top active bg-green-600 border-t-2 border-green-800 p-4 pr-24">
+                        <a href="#" class="categories-a text-white">Головна</a>
                     </li>
-                    <li class="categories-li">
-                        <a href="html/goods.html" class="categories-a">Товари <span class="categ-span">+</span></a>
+                    <li class="categories-li bg-green-600 border-b-2 border-green-800 p-4 pr-16">
+                        <a href="html/goods.html" class="categories-a text-white">Товари <span class="categ-span">+</span></a>
                     </li>
-                    <li class="categories-li">
-                        <a class="categories-a">Новинки</a>
+                    <li class="categories-li bg-green-600 border-b-2 border-green-800 p-4">
+                        <a class="categories-a text-white">Новинки</a>
                     </li>
-                    <li class="categories-li">
-                        <a class="categories-a">Доставки</a>
+                    <li class="categories-li bg-green-600 border-b-2 border-green-800 p-4">
+                        <a class="categories-a text-white">Доставки</a>
                     </li>
-                    <li class="categories-li">
-                        <a  class="categories-a">Про нас</a>
+                    <li class="categories-li bg-green-600 border-b-2 border-green-800 p-4">
+                        <a class="categories-a text-white">Про нас</a>
                     </li>
-                    <li class="categories-li bottom">
-                        <a  class="categories-a">Контакти</a>
+                    <li class="categories-li bottom bg-green-600 border-b-2 border-green-800 p-4 pr-6">
+                        <a class="categories-a text-white">Контакти</a>
                     </li>
                 </ul>
             </div>
 
             <div class="about">
-                <h3 class="categories-title">Про нас</h3>
-                <div class="content">
-                    <hr class="content-hr" />
+                <h3 class="categories-title text-3xl font-bold">Про нас</h3>
+                <div class="content mt-8">
+                    <hr class="content-hr border-t-2 border-gray-300 my-6" />
                     <p class="card-p"><strong class="card-strong">Мінімальна сума замовлення: від 300 грн.</strong></p>
                     <p class="card-p">Знижки для оптових замовлень:</p>
                     <p class="card-p"><strong class="card-strong">від 3000 грн. = 2%</strong></p>
                     <p class="card-p"><strong class="card-strong">від 5000 грн. = 4%</strong></p>
                     <p class="card-p"><strong class="card-strong">від 10000 грн. = 9%</strong></p>
                     <p class="card-p"><strong class="card-strong">Знижка не поширюється на замовлення до 5 товарів, для таких замовлень ціна сайту.</strong></p>
-                    <p class="card-p">Рекомендуємо зареєструватися на сайті igrushkifromNastushka.com,
-                        щоб зберігався кошик замовлення та бачити історію замовлень, накопичувати бонуси.</p>
-                    <p class="card-p"><strong class="card-strong">Чому краще працювати з нами:</strong>
+                    <p class="card-p">Рекомендуємо зареєструватися на сайті igrushkifromNastushka.com, щоб зберігався кошик замовлення та бачити історію замовлень, накопичувати бонуси.</p>
+                    <p class="card-p"><strong class="card-strong">Чому краще працювати з нами:</strong><br>
+                        - Ми прислухаємося до Ваших побаж
                         <br>
-                        - Ми прислухаємося до Ваших побажань та коментарів!
-                        <br>
-                        &nbsp; - Товар перед упаковкою оглядаємо!
-                        <br>
+                        &nbsp; - Товар перед упаковкою оглядаємо!<br>
                         &nbsp; - Оперативна обробка замовлень.
                     </p>
-                    <p class="card-p"><strong class="card-strong">Про компанію:</strong>
-                        <br> Компанія <strong class="card-strong"> «igrashki.com»</strong>  з 2005 року працює на ринку <strong>дитячих іграшок оптом.</strong>
+                    <p class="card-p"><strong class="card-strong">Про компанію:</strong><br>
+                        Компанія <strong class="card-strong"> «igrashki.com»</strong>  з 2005 року працює на ринку <strong>дитячих іграшок оптом.</strong>
                         Поставляємо іграшки оптом в магазини по всій території України.
                         Ми надійна компанія з величезним досвідом роботи, яка постійно розвивається.
-                        Ми поставляємо і продаємо <strong class="card-strong">дитячі іграшки оптом</strong>.
-                        <br>
+                        Ми поставляємо і продаємо <strong class="card-strong">дитячі іграшки оптом</strong>.<br>
                         Ми робимо прямі закупівлі товару у виробників з України, Китаю, Польщі.
                         Асортимент нашої компанії налічує більше 6000 найменувань дитячих іграшок і товарів.
                         Постійно оновлюємо асортимент - новими, актуальним і трендовими товарами на ринку.
                         Наша мета, щоб співпраця з нами приносила нашим клієнтам максимальний успіх в їх бізнесі.
                     </p>
-                    <p>Сфера діяльності нашої компанії - <strong class="card-strong">оптово-роздрібна торгівля іграшками</strong>.
-                        <br>
-                        Клієнт - перш за Все!
-                        <br>
+                    <p class="card-p">Сфера діяльності нашої компанії - <strong class="card-strong">оптово-роздрібна торгівля іграшками</strong>.<br>
+                        Клієнт - перш за Все!<br>
                         Оптові клієнти можуть отримати консультацію по асортименту, обговорити умови співпраці,
                         вибрати оптимальний спосіб доставки і зробити замовлення, будь-яким зручним способом зв'язку.
                     </p>
-                    <p>Наша мета, щоб співпраця з нами приносила нашим клієнтам максимальний успіх в їх бізнесі.</p>
+                    <p class="card-p">Наша мета, щоб співпраця з нами приносила нашим клієнтам максимальний успіх в їх бізнесі.</p>
                 </div>
             </div>
         </div>
 
-
-        <div class="cards-about">
-            <div class="info">
+        <div class="cards-about bg-gray-200 flex justify-center items-center gap-14 mt-16 p-8">
+            <div class="info flex flex-col items-center text-center">
                 <img class="icon-card" src="assets/icons/cards/card1.png" alt="">
-                <h4 class="desc-h4">Зручна доставка</h4>
-                <p class="desc-p">Зручна та швидка доставка обраною Вами службою доставки.</p>
+                <h4 class="desc-h4 text-gray-700 text-lg font-semibold mt-4">Зручна доставка</h4>
+                <p class="desc-p text-gray-600 text-sm max-w-md mt-2">Зручна та швидка доставка обраною Вами службою доставки.</p>
             </div>
 
-            <div class="info">
+            <div class="info flex flex-col items-center text-center">
                 <img class="icon-card" src="assets/icons/cards/card2.png" alt="">
-                <h4 class="desc-h4">Асортимент</h4>
-                <p class="desc-p">Неймовірно великий асортимент товарів на будь-який смак та вік.</p>
+                <h4 class="desc-h4 text-gray-700 text-lg font-semibold mt-4">Асортимент</h4>
+                <p class="desc-p text-gray-600 text-sm max-w-md mt-2">Неймовірно великий асортимент товарів на будь-який смак та вік.</p>
             </div>
 
-            <div class="info">
+            <div class="info flex flex-col items-center text-center">
                 <img class="icon-card" src="assets/icons/cards/card3.png" alt="">
-                <h4 class="desc-h4">Оплата</h4>
-                <p class="desc-p">Оплата готівкою та через банківський рахунок за найкращими цінами.</p>
+                <h4 class="desc-h4 text-gray-700 text-lg font-semibold mt-4">Оплата</h4>
+                <p class="desc-p text-gray-600 text-sm max-w-md mt-2">Оплата готівкою та через банківський рахунок за найкращими цінами.</p>
             </div>
         </div>
+
     </div>
 
     <div class="line">
         <div class="table"></div>
     </div>
 
-    <div class="footer">
-        <div class="lists-footer">
-            <div class="column">
-                <h3 class="column-h">Способи оплати</h3>
-                <div class="images-shop">
+    <div class="footer bg-background-footer py-20">
+        <div class="flex justify-center gap-x-70 lists-footer">
+            <div class="column max-w-300 text-left">
+                <h3 class="column-h font-bold mb-10 text-20 text-color-subtitle">Способи оплати</h3>
+                <div class="images-shop mb-5">
                     <img src="assets/icons/Shop_Cart.png" alt="">
                     <img src="assets/icons/Shopicons_Bold.png" alt="">
                 </div>
-                <p class="column-p">Ви можете оплатити покупку онлайн через сервіс portmone.com.ua або готівкою у поштовому відділені.</p>
+                <p class="column-p text-16 max-w-210">Ви можете оплатити покупку онлайн через сервіс portmone.com.ua або готівкою у поштовому відділені.</p>
             </div>
 
-
-            <div class="column">
-                <h3 class="column-h">Інформація</h3>
-                <p>Договір публічної оферти</p>
-                <p>Оплата та Доставка</p>
-                <p>Обмін та повернення товару</p>
-                <p>Контакти</p>
+            <div class="column max-w-300 text-left">
+                <h3 class="column-h font-bold mb-10 text-20 text-color-subtitle">Інформація</h3>
+                <p class="text-16">Договір публічної оферти</p>
+                <p class="text-16">Оплата та Доставка</p>
+                <p class="text-16">Обмін та повернення товару</p>
+                <p class="text-16">Контакти</p>
             </div>
 
-            <div class="column">
-                <h3 class="column-h">Контакти</h3>
-                <div class="card">
+            <div class="column max-w-300 text-left">
+                <h3 class="column-h font-bold mb-10 text-20 text-color-subtitle">Контакти</h3>
+                <div class="card mb-5">
                     <img src="assets/icons/Store.png" class="icon" alt="">
-                    <p class="column-p">м. Кропивницький,<br> Полтавська 81</p>
+                    <p class="column-p text-16">м. Кропивницький,<br> Полтавська 81</p>
                 </div>
-                <div class="card">
+                <div class="card mb-5">
                     <img src="assets/icons/phone.png" class="icon" alt="">
-                    <p>+380 66 341 15 28 Viber</p>
+                    <p class="text-16">+380 66 341 15 28 Viber</p>
                 </div>
-                <div class="card">
+                <div class="card mb-5">
                     <img src="assets/icons/message.png" class="icon" alt="">
                     <a href="mailto:Igrushki@gmail.com" class="contact-link">Igrushki@gmail.com</a>
                 </div>
                 <div class="card">
                     <img src="assets/icons/clock.png" class="icon" alt="">
-                    <p>пн-сб / 9:00-17:00</p>
+                    <p class="text-16">пн-сб / 9:00-17:00</p>
                 </div>
             </div>
-
         </div>
-        <hr />
-        <p class="footer-end">© 2023 NASTYA</p>
+        <hr class="line" />
+        <p class="footer-end ml-100 mb-0 text-16">© 2023 NASTYA</p>
     </div>
-
 </div>
-
 
 </body>
 </html>

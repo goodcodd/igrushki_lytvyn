@@ -76,6 +76,12 @@
     margin: 8px 5px 100px;
 }
 
+.good.active {
+    border: 3px solid rgba(134, 167, 168, 0.5);
+    transform: scale(1.0);
+    transition: border 0.1s ease-out, transform 0.1s ease-out;
+}
+
 .good-body {
     padding: 15px 5px;
     font-weight: 400;
@@ -127,16 +133,14 @@
     border-radius: 50%;
     width: 15px;
     height: 15px;
-    bottom: -450px;
+    z-index: 1;
 }
 
 .next2 {
-    right: 0;
     right: 20px;
 }
 
 .prev2 {
-    left: 0;
     left: 20px;
 }
 
@@ -148,6 +152,7 @@
     font-size: 15px;
     padding: 3px;
 }
+
 
 @media screen and (min-width: 1280px) {
     .prev2, .next2 {

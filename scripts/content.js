@@ -1,60 +1,46 @@
-document.addEventListener("DOMContentLoaded", function() {
-    let slideIndex = 0;
+$(document).ready(function () {
     const slidesPerView = 3;
-    const cards = document.querySelectorAll(".good");
 
-    function plusSlides(n) {
-        slideIndex += n;
-        if (slideIndex < 0) {
-            slideIndex = cards.length - slidesPerView;
-        } else if (slideIndex > cards.length - slidesPerView) {
-            slideIndex = 0;
-        }
-        showSlides();
-    }
-
-    function showSlides() {
-        for (let i = 0; i < cards.length; i++) {
-            cards[i].style.display = "none";
-        }
-
-        for (let i = slideIndex; i < slideIndex + slidesPerView; i++) {
-            if (cards[i]) {
-                cards[i].style.display = "block";
+    const slider = $('.list-goods-slider').slick({
+        infinite: true,
+        slidesToShow: slidesPerView,
+        slidesToScroll: 1,
+        centerMode: true,
+        variableWidth: true,
+        prevArrow: '<a class="prev2 custom-button absolute left-20 bottom-2" href="#"><span class="button-text text-teal-500 bg-opacity-70 bg-teal-700 rounded-full px-4 py-2">❮</span></a>',
+        nextArrow: '<a class="next2 custom-button absolute right-20 bottom-2" href="#"><span class="button-text text-teal-500 bg-opacity-70 bg-teal-700 rounded-full px-4 py-2">❯</span></a>',
+        responsive: [
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 2,
+                }
+            },
+            {
+                breakpoint: 480,
+                settings: {
+                    slidesToShow: 1,
+                }
             }
-        }
-    }
-
-    let prevButton = document.querySelector(".prev2");
-    let nextButton = document.querySelector(".next2");
-
-    prevButton.addEventListener("click", function() {
-        plusSlides(-1);
-        updateCardSize();
+        ]
     });
 
-    nextButton.addEventListener("click", function() {
-        plusSlides(1);
-        updateCardSize();
+    $('.prev2').on('click', function (e) {
+        e.preventDefault();
+        slider.slick('slickPrev');
     });
 
-    function updateCardSize() {
-        for (let i = 0; i < cards.length; i++) {
-            if (i === Math.floor(slideIndex + (slidesPerView / 2))) {
-                cards[i].style.transform = "scale(1.05)";
-                cards[i].style.border = "2px solid rgba(134, 167, 168, 0.5)";
-            } else {
-                cards[i].style.transform = "scale(1)";
-                cards[i].style.border = "none";
-            }
-        }
-    }
-
-    updateCardSize();
-
-    cards.forEach(card => {
-        card.style.transition = "transform 0.3s";
+    $('.next2').on('click', function (e) {
+        e.preventDefault();
+        slider.slick('slickNext');
     });
 
-    showSlides();
+    slider.on('afterChange', function (event, slick, currentSlide) {
+        updateCardStyle(currentSlide);
+    });
 });
+
+function updateCardStyle(index) {
+    $('.good').removeClass('active');
+    $('.good[data-slick-index="' + index + '"]').addClass('active');
+}

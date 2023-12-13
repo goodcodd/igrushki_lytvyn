@@ -8,6 +8,10 @@
     src: url("../../assets/fonts/SourceSansPro-Black.otf");
 }
 
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 :root {
     --color-light-grey: #BCBAAA;
 }
