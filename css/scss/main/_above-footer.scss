@@ -1,0 +1,22 @@
+.categories-li {
+  display: block;
+  padding: 15px 30px 15px 40px;
+  font-size: 20px;
+  box-shadow: none;
+  background-color: #7a9e9f;
+  border-bottom: 1px solid #556767;
+
+  &.top {
+    background-color: #86A7A8;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    padding-right: 150px;
+  }
+
+  &.bottom {
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-bottom: none;
+    padding-right: 60px;
+  }
+}

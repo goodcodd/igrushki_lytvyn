@@ -1,0 +1,44 @@
+:root {
+  --color-light-blue:#86A7A8;
+  --ground-light:#F4F3EF;
+  --color-white:#ffffff;
+}
+
+.conteriner-goods {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--ground-light);
+  padding: 20px;
+}
+
+.card-team {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  padding: 15px;
+  justify-content: center;
+}
+
+.good_item {
+  text-align: center;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.card-team_name {
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.good-team_photo {
+  transition-duration: 1s;
+
+  &:hover {
+    transform: scale(1.1, 1.1);
+    transition-duration: 1s;
+  }
+}

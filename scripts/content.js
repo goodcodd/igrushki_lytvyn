@@ -7,8 +7,6 @@ $(document).ready(function () {
         slidesToScroll: 1,
         centerMode: true,
         variableWidth: true,
-        prevArrow: '<a class="prev2 custom-button absolute left-20 bottom-2" href="#"><span class="button-text text-teal-500 bg-opacity-70 bg-teal-700 rounded-full px-4 py-2">❮</span></a>',
-        nextArrow: '<a class="next2 custom-button absolute right-20 bottom-2" href="#"><span class="button-text text-teal-500 bg-opacity-70 bg-teal-700 rounded-full px-4 py-2">❯</span></a>',
         responsive: [
             {
                 breakpoint: 768,

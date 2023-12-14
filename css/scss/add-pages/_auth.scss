@@ -1,0 +1,114 @@
+.sign_form {
+  display: flex;
+  flex-direction: column;
+}
+
+.sign-up_form label {
+  margin-right: 15%;
+}
+
+.auth {
+  margin-left: 50px;
+}
+
+.sign_field-input {
+  background-color: #fff;
+  border: 1px solid #CCC5B9;
+  border-radius: 4px;
+  color: #66615b;
+  font-size: 16px;
+  transition: background-color 0.3s ease 0s;
+  padding: 7px 18px;
+  height: 40px;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  outline: 0;
+  margin: 10px 0 10px 0;
+  max-width: 100%;
+}
+
+.btn-inner-container {
+  color: #7A9E9F;
+  background-color: transparent;
+  display: inline-flex;
+  border: 2px solid var(--color-light-blue);
+  border-radius: 50px;
+  overflow: hidden;
+  justify-content: center;
+  margin: 15px 15px 15px 0px;
+  padding: 20px;
+  cursor: pointer;
+  text-transform: uppercase;
+
+  &:hover {
+    background-color: #7A9E9F;
+    color: rgba(255, 255, 255, 0.7);
+    border-color: #7A9E9F;
+  }
+}
+
+.Form-checkbox-container {
+  width: fit-content;
+  display: flex;
+  flex-direction: row-reverse;
+  cursor: pointer;
+
+  &:hover {
+    color: #66615b;
+    text-decoration: none;
+  }
+
+  input {
+    height: 20px;
+    width: 20px;
+    color: #66615b;
+    box-sizing: border-box;
+    margin-right: 15px;
+  }
+
+  label {
+    font-weight: bold;
+    color: #66615b;
+  }
+}
+
+.Form-btn-a {
+  display: flex;
+  text-decoration: none;
+  flex-direction: column;
+  margin-top: 10px;
+
+  a {
+    font-size: 20px;
+    color: #86A7A8;
+    margin: 5px;
+
+    &:hover {
+      color: #427c89;
+    }
+  }
+}
+
+h1 {
+  font-weight: 400;
+  line-height: 1.1;
+  color: #66615b;
+  font-size: 30px;
+}
+
+h2 {
+  line-height: 1.1;
+  color: #66615b;
+  line-height: 1.1;
+  font-size: 16px;
+}
+
+@media screen and (max-width: 800px) {
+  .auth {
+    margin-left: 0px;
+  }
+
+  .content-container {
+    flex-direction: column-reverse;
+  }
+}
