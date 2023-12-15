@@ -12,8 +12,8 @@ document.addEventListener("DOMContentLoaded", function() {
 
     function showSlides(n) {
         let i;
-        let slides = document.getElementsByClassName("slider-first");
-        let dots = document.getElementsByClassName("dot");
+        const slides = document.getElementsByClassName("slider-first");
+        const dots = document.getElementsByClassName("dot");
         if (n > slides.length) { slideIndex = 1; }
         if (n < 1) { slideIndex = slides.length; }
         for (i = 0; i < slides.length; i++) {
@@ -26,8 +26,8 @@ document.addEventListener("DOMContentLoaded", function() {
         dots[slideIndex - 1].className += " active";
     }
 
-    let prevButton = document.querySelector(".prev");
-    let nextButton = document.querySelector(".next");
+    const prevButton = document.querySelector(".prev");
+    const nextButton = document.querySelector(".next");
 
     prevButton.addEventListener("click", function() {
         plusSlides(-1);
@@ -37,8 +37,9 @@ document.addEventListener("DOMContentLoaded", function() {
         plusSlides(1);
     });
 });
+
 function myFunction() {
-    var x = document.getElementById("myTopnav");
+    const x = document.getElementById("myTopnav");
     if (x.className === "topnav") {
         x.className += " responsive";
     } else {
@@ -47,8 +48,8 @@ function myFunction() {
 }
 
 function toggleMenu() {
-    var menu = document.getElementById("menu-list");
-    var burger = document.querySelector(".burger-menu");
+    const menu = document.getElementById("menu-list");
+    const burger = document.querySelector(".burger-menu");
 
     if (menu.style.display === "block") {
         menu.style.display = "none";
