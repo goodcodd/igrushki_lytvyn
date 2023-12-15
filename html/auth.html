@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="../../assets/icons/toys.png">
+    <link rel="shortcut icon" href="../assets/icons/toys.png">
     <title>Igrushki</title>
     <link rel="stylesheet" type="text/css" href="../css/main-page-css/styles.css">
     <link rel="stylesheet" type="text/css" href="../css/main-page-css/header.css">
@@ -30,7 +30,7 @@
 
             <ul class="main-ul">
                 <li class="main-li li-bottom">
-                    <a class="main-a" href="+380663411528" target="_blank">
+                    <a class="main-a" href="/" target="_blank">
                         <img src="../assets/icons/phone.png" alt="Phone Icon">
                         +380 66 341 15 28
                     </a>
@@ -118,9 +118,11 @@
                 <h2>Якщо Ви зареєстровані, будь ласка, введіть свій мейл та пароль:*</h2>
                 <div class="sign_field">
                     <form id="loginForm" class="sign_form" onsubmit="return validateForm()">
+                        <label for="loginEmail">Email:</label>
                         <input type="email" id="loginEmail" name="email" class="sign_field-input" placeholder="email" required>
-                        <input type="password" id="loginPassword" name="password" class="sign_field-input" placeholder="password" required>
 
+                        <label for="loginPassword">Password:</label>
+                        <input type="password" id="loginPassword" name="password" class="sign_field-input" placeholder="password" required>
                     </form>
                     <div class="Form-btn">
                         <button type="submit" class="btn-inner-container">Увійти</button>
@@ -139,19 +141,27 @@
                     <div class="sign_field">
                         <form id="registrationForm" class="sign_form" onsubmit="return validateForm()">
 
+                            <label for="firstName">Ім'я*:</label>
                             <input type="text" id="firstName" name="firstName" class="sign_field-input" placeholder="Ім'я*" required>
 
-                            <input type="text" id="lastName" name="lastName"  class="sign_field-input" placeholder="Прізвище*" required >
+                            <label for="lastName">Прізвище*:</label>
+                            <input type="text" id="lastName" name="lastName" class="sign_field-input" placeholder="Прізвище*" required>
 
+                            <label for="email">E-mail*:</label>
                             <input type="email" id="email" name="email" class="sign_field-input" placeholder="E-mail*" required>
 
+                            <label for="password">Пароль*:</label>
                             <input type="password" id="password" name="password" class="sign_field-input" placeholder="Пароль*" required>
 
+                            <label for="department">№ відділення\Індекс*:</label>
                             <input type="text" id="department" name="department" class="sign_field-input" placeholder="№ відділення\Індекс*" required>
 
+                            <label for="city">Місто*:</label>
                             <input type="text" id="city" name="city" class="sign_field-input" placeholder="Місто*" required>
 
+                            <label for="phone">Телефон*:</label>
                             <input type="tel" id="phone" name="phone" class="sign_field-input" placeholder="Телефон*" required>
+
 
                         </form>
                         <div class="Form-btn">

@@ -27,12 +27,11 @@
     padding: 10px 20px;
     background-color: var(--color-light-blue);
     border: none;
-    font-family: SourceSansPro_Black;
+    font-family: "SourceSansPro_Black", Arial, sans-serif;
     font-weight: bold;
 }
 
 .btn-right {
-    background-color: var(--ground-light);
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
     background-color: var(--ground-light);
@@ -109,14 +108,10 @@
     width: 100px;
     height: 30px;
     background-color: var(--color-yellow);
-    border-radius: 50%;
+    border-radius: 50% 50% 50% 50% / 50px 50px 50px 50px;
     font-size: 14px;
     color: var(--color-white);
     border: none;
-    border-top-left-radius: 39.5px;
-    border-top-right-radius: 39.5px;
-    border-bottom-left-radius: 39.5px;
-    border-bottom-right-radius: 39.5px;
 }
 
 .good-btn:hover {
@@ -169,7 +164,7 @@
     }
 
     .good {
-        margin: 0px 20px 80px;
+        margin: 0 20px 80px;
     }
 }
 

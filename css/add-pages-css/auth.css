@@ -31,7 +31,7 @@
     border-radius: 50px;
     overflow: hidden;
     justify-content: center;
-    margin: 15px 15px 15px 0px;
+    margin: 15px 15px 15px 0;
     padding: 20px;
     cursor: pointer;
     text-transform: uppercase;
@@ -85,15 +85,15 @@ h1{
     color: #66615b;
     font-size: 30px;
 }
-h2{
+h2 {
     line-height: 1.1;
     color: #66615b;
-    line-height: 1.1;
     font-size: 16px;
 }
+
 @media screen and (max-width: 800px){
     .auth{
-        margin-left: 0px;
+        margin-left: 0;
     }
     .content-container{
         flex-direction: column-reverse;
