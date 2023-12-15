@@ -45,7 +45,7 @@
     color: var(--color-dark-tael);
     font-size: 20px;
     font-weight: bold;
-    font-family: SourceSansPro_Black;
+    font-family: "SourceSansPro_Black", Arial, sans-serif;
 }
 
 .main-ul {
@@ -117,7 +117,7 @@
     justify-content: center;
     align-items: center;
     font-weight: bold;
-    font-family: SourceSansPro_Light;
+    font-family: SourceSansPro_Light, Arial, sans-serif;;
     margin: 0;
 }
 
@@ -171,7 +171,35 @@
 .dropdown:hover .dropdown-content {
     display: block;
 }
+
 /*slider*/
+
+@keyframes imageAnimation {
+    0% {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1.0);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1.0);
+    }
+}
+
+.slider-first img:not(.active) {
+    opacity: 0;
+    transform: scale(0.8);
+}
+
+.slider-first img {
+    width: 100%;
+    display: block;
+    transition: transform 1.6s ease, opacity 0.1s ease;
+    animation: imageAnimation 5s forwards;
+}
 
 .slideshow-container {
     position: relative;
@@ -179,12 +207,6 @@
     text-align: center;
     max-width: 100%;
 }
-
-.slider-first img {
-    width: 100%;
-    display: block;
-}
-
 
 
 .text {
@@ -224,20 +246,17 @@
     width: 200px;
     height: 50px;
     background-color: var(--color-yellow);
-    border-radius: 50%;
+    border-radius: 30% 30% 30% 30% / 50px 50px 50px 50px;
     font-size: 18px;
     color: white;
     border: none;
-    border-top-left-radius: 39.5px;
-    border-top-right-radius: 39.5px;
-    border-bottom-left-radius: 39.5px;
-    border-bottom-right-radius: 39.5px;
 }
+
 
 .bullets {
     text-align: center;
     position: absolute;
-    bottom: 10px; /* Raise the dots by 10px */
+    bottom: 10px;
     left: 50%;
     transform: translateX(-50%);
 }
@@ -270,12 +289,10 @@
 }
 
 .next {
-    right: 0;
     right: 20px;
 }
 
 .prev {
-    left: 0;
     left: 20px;
 }
 
@@ -354,14 +371,12 @@
 
     /* Transform burger into 'X' when open */
     .change .bar1 {
-        -webkit-transform: rotate(-45deg) translate(-9px, 6px);
         transform: rotate(-45deg) translate(-9px, 6px);
     }
 
     .change .bar2 {opacity: 0;}
 
     .change .bar3 {
-        -webkit-transform: rotate(45deg) translate(-8px, -8px);
         transform: rotate(45deg) translate(-8px, -8px);
     }
 }

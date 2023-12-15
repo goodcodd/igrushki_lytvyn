@@ -6,9 +6,6 @@ document.addEventListener("DOMContentLoaded", function() {
         showSlides(slideIndex += n);
     }
 
-    function currentSlide(n) {
-        showSlides(slideIndex = n);
-    }
 
     function showSlides(n) {
         let i;
