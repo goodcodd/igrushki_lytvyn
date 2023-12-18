@@ -13,6 +13,8 @@
 
     <link rel="stylesheet" type="text/css" href="../css/main-page-css/body-content.css">
     <link rel="stylesheet" type="text/css" href="../css/add-pages-css/auth.css">
+
+    <script src="../scripts/auth.js"></script>
 </head>
 <body>
 <div id="header">
@@ -125,7 +127,7 @@
                         <input type="password" id="loginPassword" name="password" class="sign_field-input" placeholder="password" required>
                     </form>
                     <div class="Form-btn">
-                        <button type="submit" class="btn-inner-container">Увійти</button>
+                        <button type="submit" id="submit" class="btn-inner-container">Увійти</button>
                         <div class="Form-checkbox-container">
                             <label for="rememberMe">Запам'ятати мене:</label>
                             <input type="checkbox" id="rememberMe" name="rememberMe">
@@ -165,7 +167,7 @@
 
                         </form>
                         <div class="Form-btn">
-                            <button type="submit" class="btn-inner-container">Зареєструватися</button>
+                            <button type="submit" id="register" class="btn-inner-container">Зареєструватися</button>
                             <button type="submit" class="btn-inner-container">Скасувати</button>
                         </div>
                     </div>
@@ -174,6 +176,53 @@
                 </div>
             </div>
         </div>
+    </div>
+
+    <div class="line">
+        <div class="table"></div>
+    </div>
+
+    <div class="footer bg-background-footer py-20">
+        <div class="flex justify-center gap-x-70 lists-footer">
+            <div class="column max-w-300 text-left">
+                <h3 class="column-h font-bold mb-10 text-20 text-color-subtitle">Способи оплати</h3>
+                <div class="images-shop mb-5">
+                    <img src="assets/icons/Shop_Cart.png" alt="">
+                    <img src="assets/icons/Shopicons_Bold.png" alt="">
+                </div>
+                <p class="column-p text-16 max-w-210">Ви можете оплатити покупку онлайн через сервіс portmone.com.ua або готівкою у поштовому відділені.</p>
+            </div>
+
+            <div class="column max-w-300 text-left">
+                <h3 class="column-h font-bold mb-10 text-20 text-color-subtitle">Інформація</h3>
+                <p class="text-16">Договір публічної оферти</p>
+                <p class="text-16">Оплата та Доставка</p>
+                <p class="text-16">Обмін та повернення товару</p>
+                <p class="text-16">Контакти</p>
+            </div>
+
+            <div class="column max-w-300 text-left">
+                <h3 class="column-h font-bold mb-10 text-20 text-color-subtitle">Контакти</h3>
+                <div class="card mb-5">
+                    <img src="../assets/icons/Store.png" class="icon" alt="">
+                    <p class="column-p text-16">м. Кропивницький,<br> Полтавська 81</p>
+                </div>
+                <div class="card mb-5">
+                    <img src="../assets/icons/phone.png" class="icon" alt="">
+                    <p class="text-16">+380 66 341 15 28 Viber</p>
+                </div>
+                <div class="card mb-5">
+                    <img src="../assets/icons/message.png" class="icon" alt="">
+                    <a href="mailto:Igrushki@gmail.com" class="contact-link">Igrushki@gmail.com</a>
+                </div>
+                <div class="card">
+                    <img src="../assets/icons/clock.png" class="icon" alt="">
+                    <p class="text-16">пн-сб / 9:00-17:00</p>
+                </div>
+            </div>
+        </div>
+        <hr class="line" />
+        <p class="footer-end ml-100 mb-0 text-16">© 2023 NASTYA</p>
     </div>
 </div>
 </body>
