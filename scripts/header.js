@@ -1,7 +1,1 @@
-document.addEventListener("DOMContentLoaded",function(){let slideIndex=1;showSlides(slideIndex);function plusSlides(n){showSlides(slideIndex+=n);}
-    function showSlides(n){let i;const slides=document.getElementsByClassName("slider-first");const dots=document.getElementsByClassName("dot");if(n>slides.length){slideIndex=1;}
-        if(n<1){slideIndex=slides.length;}
-        for(i=0;i<slides.length;i++){slides[i].style.display="none";}
-        for(i=0;i<dots.length;i++){dots[i].className=dots[i].className.replace(" active","");}
-        slides[slideIndex-1].style.display="block";dots[slideIndex-1].className+=" active";}
-    const prevButton=document.querySelector(".prev");const nextButton=document.querySelector(".next");prevButton.addEventListener("click",function(){plusSlides(-1);});nextButton.addEventListener("click",function(){plusSlides(1);});});function toggleMenu(){const menu=document.getElementById("menu-list");const burger=document.querySelector(".burger-menu");if(menu.style.display==="block"){menu.style.display="none";burger.classList.remove("change");}else{menu.style.display="block";burger.classList.add("change");}}
+document.addEventListener("DOMContentLoaded",function(){function t(t){i(n+=t)}function i(t){let i;const r=document.getElementsByClassName("slider-first"),u=document.getElementsByClassName("dot");for(t>r.length&&(n=1),t<1&&(n=r.length),i=0;i<r.length;i++)r[i].style.display="none";for(i=0;i<u.length;i++)u[i].className=u[i].className.replace(" active","");r[n-1].style.display="block";u[n-1].className+=" active"}let n=1;i(n);const r=document.querySelector(".prev"),u=document.querySelector(".next");r.addEventListener("click",function(){t(-1)});u.addEventListener("click",function(){t(1)})});
