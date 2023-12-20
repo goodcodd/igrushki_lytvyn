@@ -27,22 +27,19 @@
   padding: 10px 20px;
   background-color: var(--color-light-blue);
   border: none;
-  font-family: SourceSansPro_Black;
+  font-family: "SourceSansPro_Black", sans-serif;
   font-weight: bold;
 }
 
 .btn-right {
   padding: 10px 20px;
-  background-color: var(--color-light-blue);
   border: none;
-  font-family: SourceSansPro_Black;
+  font-family: SourceSansPro_Black, sans-serif;
   font-weight: bold;
   background-color: var(--ground-light);
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
-  background-color: var(--ground-light);
   margin-left: -2px;
-  border-color: var(--color-light-blue);
 
   a {
     color: var(--color-light-blue);
@@ -186,7 +183,7 @@
   }
 
   .good {
-    margin: 0px 20px 80px;
+    margin: 0 20px 80px;
   }
 }
 

@@ -49,7 +49,7 @@ img {
     color: var(--color-dark-tael);
     font-size: 20px;
     font-weight: bold;
-    font-family: SourceSansPro_Black;
+    font-family: SourceSansPro_Black, sans-serif;
 }
 
 .main-ul {
@@ -124,7 +124,7 @@ img {
     justify-content: center;
     align-items: center;
     font-weight: bold;
-    font-family: SourceSansPro_Light;
+    font-family: SourceSansPro_Light, sans-serif;
     margin: 0;
 }
 
@@ -229,14 +229,10 @@ a {
     width: 200px;
     height: 50px;
     background-color: var(--color-yellow);
-    border-radius: 50%;
+    border-radius: 30% 30% 30% 30% / 50px 50px 50px 50px;
     font-size: 18px;
     color: white;
     border: none;
-    border-top-left-radius: 39.5px;
-    border-top-right-radius: 39.5px;
-    border-bottom-left-radius: 39.5px;
-    border-bottom-right-radius: 39.5px;
 }
 
 .bullets {
@@ -287,12 +283,10 @@ a {
     border-radius: 50%;
     width: 20px;
     height: 20px;
-    right: 0;
     right: 20px;
 }
 
 .prev {
-    left: 0;
     left: 20px;
 
 &:hover {
@@ -385,18 +379,14 @@ li {
     }
 
     .change {
-    .bar1 {
-        -webkit-transform: rotate(-45deg) translate(-9px, 6px);
-        transform: rotate(-45deg) translate(-9px, 6px);
-    }
+
 
     .bar2 {
         opacity: 0;
     }
 
     .bar3 {
-        -webkit-transform: rotate(45deg) translate(-8px, -8px);
-        transform: rotate(45deg) translate(-8px, -8px);
+        transform: rotate(-45deg) translate(-9px, 6px);
     }
 }
 }
